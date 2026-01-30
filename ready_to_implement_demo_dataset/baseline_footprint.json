@@ -1,0 +1,93 @@
+{
+  "inventory_method": "GHG Protocol",
+  "emissions_by_category": [
+    {
+      "category_id": "S2C1_Electricity",
+      "scope": "S2",
+      "category_name": "Purchased electricity for data centers & offices",
+      "base_year_tco2e": 300000,
+      "bu_split": {
+        "BU_DC1": 0.55,
+        "BU_DC2": 0.35,
+        "BU_CORP": 0.1
+      }
+    },
+    {
+      "category_id": "S3C2_CapitalGoods_Servers",
+      "scope": "S3",
+      "category_name": "Capital goods: servers & network equipment",
+      "base_year_tco2e": 140000,
+      "bu_split": {
+        "BU_DC1": 0.5,
+        "BU_DC2": 0.45,
+        "BU_CORP": 0.05
+      }
+    },
+    {
+      "category_id": "S1C1_GeneratorsFuel",
+      "scope": "S1",
+      "category_name": "Stationary combustion: backup generators fuel",
+      "base_year_tco2e": 20000,
+      "bu_split": {
+        "BU_DC1": 0.6,
+        "BU_DC2": 0.4,
+        "BU_CORP": 0.0
+      }
+    },
+    {
+      "category_id": "S3C1_PurchasedGoods",
+      "scope": "S3",
+      "category_name": "Purchased goods & services (non-capital)",
+      "base_year_tco2e": 15000,
+      "bu_split": {
+        "BU_DC1": 0.3,
+        "BU_DC2": 0.3,
+        "BU_CORP": 0.4
+      }
+    },
+    {
+      "category_id": "S3C6_BusinessTravel",
+      "scope": "S3",
+      "category_name": "Business travel",
+      "base_year_tco2e": 10000,
+      "bu_split": {
+        "BU_DC1": 0.2,
+        "BU_DC2": 0.2,
+        "BU_CORP": 0.6
+      }
+    },
+    {
+      "category_id": "S3C4_UpstreamTransport",
+      "scope": "S3",
+      "category_name": "Upstream transportation & distribution",
+      "base_year_tco2e": 6000,
+      "bu_split": {
+        "BU_DC1": 0.4,
+        "BU_DC2": 0.4,
+        "BU_CORP": 0.2
+      }
+    },
+    {
+      "category_id": "S3C7_Commuting",
+      "scope": "S3",
+      "category_name": "Employee commuting",
+      "base_year_tco2e": 5000,
+      "bu_split": {
+        "BU_DC1": 0.35,
+        "BU_DC2": 0.35,
+        "BU_CORP": 0.3
+      }
+    },
+    {
+      "category_id": "S3C5_Waste",
+      "scope": "S3",
+      "category_name": "Waste generated in operations",
+      "base_year_tco2e": 4000,
+      "bu_split": {
+        "BU_DC1": 0.45,
+        "BU_DC2": 0.45,
+        "BU_CORP": 0.1
+      }
+    }
+  ]
+}

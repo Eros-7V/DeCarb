@@ -1,0 +1,54 @@
+{
+  "company_id": "DC-DEMO-001",
+  "name": "DemoCloud Data Services",
+  "sector": "Data Centers / IT Services",
+  "regions": [
+    "North America",
+    "Europe"
+  ],
+  "base_year": 2024,
+  "horizon_year": 2034,
+  "growth_assumptions": {
+    "annual_growth_rate": 0.03,
+    "by_category_growth_rate": {
+      "S2C1_Electricity": 0.04,
+      "S3C2_CapitalGoods_Servers": 0.05,
+      "S1C1_GeneratorsFuel": 0.02,
+      "S3C1_PurchasedGoods": 0.02,
+      "S3C6_BusinessTravel": 0.01,
+      "S3C4_UpstreamTransport": 0.02,
+      "S3C5_Waste": 0.01,
+      "S3C7_Commuting": 0.01
+    }
+  },
+  "business_units": [
+    {
+      "bu_id": "BU_DC1",
+      "name": "Data Center East"
+    },
+    {
+      "bu_id": "BU_DC2",
+      "name": "Data Center West"
+    },
+    {
+      "bu_id": "BU_CORP",
+      "name": "Corporate Functions"
+    }
+  ],
+  "finance": {
+    "wacc": 0.08,
+    "currency": "USD",
+    "carbon_price_path": {
+      "2025": 0.0,
+      "2026": 0.0,
+      "2027": 0.0,
+      "2028": 0.0,
+      "2029": 0.0,
+      "2030": 0.0,
+      "2031": 0.0,
+      "2032": 0.0,
+      "2033": 0.0,
+      "2034": 0.0
+    }
+  }
+}

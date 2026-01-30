@@ -1,0 +1,9 @@
+category_id,scope,category_name,base_year_tco2e,bu_split
+S2C1_Electricity,S2,Purchased electricity for data centers & offices,300000,"{""BU_DC1"": 0.55, ""BU_DC2"": 0.35, ""BU_CORP"": 0.1}"
+S3C2_CapitalGoods_Servers,S3,Capital goods: servers & network equipment,140000,"{""BU_DC1"": 0.5, ""BU_DC2"": 0.45, ""BU_CORP"": 0.05}"
+S1C1_GeneratorsFuel,S1,Stationary combustion: backup generators fuel,20000,"{""BU_DC1"": 0.6, ""BU_DC2"": 0.4, ""BU_CORP"": 0.0}"
+S3C1_PurchasedGoods,S3,Purchased goods & services (non-capital),15000,"{""BU_DC1"": 0.3, ""BU_DC2"": 0.3, ""BU_CORP"": 0.4}"
+S3C6_BusinessTravel,S3,Business travel,10000,"{""BU_DC1"": 0.2, ""BU_DC2"": 0.2, ""BU_CORP"": 0.6}"
+S3C4_UpstreamTransport,S3,Upstream transportation & distribution,6000,"{""BU_DC1"": 0.4, ""BU_DC2"": 0.4, ""BU_CORP"": 0.2}"
+S3C7_Commuting,S3,Employee commuting,5000,"{""BU_DC1"": 0.35, ""BU_DC2"": 0.35, ""BU_CORP"": 0.3}"
+S3C5_Waste,S3,Waste generated in operations,4000,"{""BU_DC1"": 0.45, ""BU_DC2"": 0.45, ""BU_CORP"": 0.1}"

@@ -1,0 +1,988 @@
+[
+  {
+    "lever_id": "L01_PUE_Optimization",
+    "title": "PUE optimization (cooling controls, airflow management, AI tuning)",
+    "description": "Reduce electricity intensity via improved cooling efficiency and operational controls.",
+    "lever_type": "specification",
+    "scope_targets": [
+      "S2"
+    ],
+    "category_targets": [
+      "S2C1_Electricity"
+    ],
+    "prerequisites": [
+      "Telemetry / sub-metering",
+      "BMS integration"
+    ],
+    "potential": {
+      "min_pct": 0.08,
+      "central_pct": 0.12,
+      "max_pct": 0.15
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 3,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 2.0,
+        "2026": 1.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.2,
+        "2026": 0.2,
+        "2027": 0.2,
+        "2028": 0.2,
+        "2029": 0.2,
+        "2030": 0.2,
+        "2031": 0.2,
+        "2032": 0.2,
+        "2033": 0.2,
+        "2034": 0.2
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 1.5,
+        "2027": 3.0,
+        "2028": 3.0,
+        "2029": 3.0,
+        "2030": 3.0,
+        "2031": 3.0,
+        "2032": 3.0,
+        "2033": 3.0,
+        "2034": 3.0
+      },
+      "headcount_by_year": {
+        "2025": 2.0,
+        "2026": 1.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "medium",
+    "evidence_snippets": [
+      "Efficiency upgrades typically deliver single-digit to mid-teen electricity reductions depending on site baseline."
+    ]
+  },
+  {
+    "lever_id": "L02_Server_Virtualization",
+    "title": "Server virtualization & utilization uplift",
+    "description": "Reduce physical server count via virtualization, containerization and workload consolidation.",
+    "lever_type": "quantity",
+    "scope_targets": [
+      "S3",
+      "S2"
+    ],
+    "category_targets": [
+      "S3C2_CapitalGoods_Servers",
+      "S2C1_Electricity"
+    ],
+    "prerequisites": [
+      "Application portfolio assessment",
+      "Cloud workload scheduling governance"
+    ],
+    "potential": {
+      "min_pct": 0.1,
+      "central_pct": 0.18,
+      "max_pct": 0.25
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 4,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 3.0,
+        "2026": 3.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.5,
+        "2026": 0.5,
+        "2027": 0.5,
+        "2028": 0.5,
+        "2029": 0.5,
+        "2030": 0.5,
+        "2031": 0.5,
+        "2032": 0.5,
+        "2033": 0.5,
+        "2034": 0.5
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 1.0,
+        "2027": 2.0,
+        "2028": 3.5,
+        "2029": 3.5,
+        "2030": 3.5,
+        "2031": 3.5,
+        "2032": 3.5,
+        "2033": 3.5,
+        "2034": 3.5
+      },
+      "headcount_by_year": {
+        "2025": 3.0,
+        "2026": 2.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "high",
+    "evidence_snippets": [
+      "Virtualization impact depends on legacy constraints and workload compatibility; potential ranges are wide."
+    ]
+  },
+  {
+    "lever_id": "L03_Renewable_PPAs",
+    "title": "Renewable electricity procurement (PPAs / green tariffs)",
+    "description": "Shift purchased electricity to low-carbon sources through PPAs or green tariffs.",
+    "lever_type": "transfer",
+    "scope_targets": [
+      "S2"
+    ],
+    "category_targets": [
+      "S2C1_Electricity"
+    ],
+    "prerequisites": [
+      "Load profiling",
+      "Contracting capability",
+      "Credible EAC/REC strategy"
+    ],
+    "potential": {
+      "min_pct": 0.5,
+      "central_pct": 0.8,
+      "max_pct": 1.0
+    },
+    "transfer_params": {
+      "low_carbon_intensity_ratio": 0.05,
+      "max_share_shift": 1.0
+    },
+    "ramp": {
+      "default_start_year": 2026,
+      "default_duration_years": 5,
+      "curve": "linear"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.4,
+        "2026": 0.4,
+        "2027": 0.4,
+        "2028": 0.4,
+        "2029": 0.4,
+        "2030": 0.4,
+        "2031": 0.4,
+        "2032": 0.4,
+        "2033": 0.4,
+        "2034": 0.4
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "headcount_by_year": {
+        "2025": 0.0,
+        "2026": 1.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "medium",
+    "evidence_snippets": [
+      "Assume near cost-neutral procurement for prototype; real-world cost depends on market and contract terms."
+    ]
+  },
+  {
+    "lever_id": "L04_Onsite_Solar_Storage",
+    "title": "Onsite solar + storage at facilities",
+    "description": "Install onsite renewables to reduce grid electricity consumption and peak demand.",
+    "lever_type": "transfer",
+    "scope_targets": [
+      "S2"
+    ],
+    "category_targets": [
+      "S2C1_Electricity"
+    ],
+    "prerequisites": [
+      "Site feasibility",
+      "Interconnection approval",
+      "CapEx availability"
+    ],
+    "potential": {
+      "min_pct": 0.05,
+      "central_pct": 0.12,
+      "max_pct": 0.2
+    },
+    "transfer_params": {
+      "low_carbon_intensity_ratio": 0.1,
+      "max_share_shift": 0.25
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 3,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 5.0,
+        "2026": 6.0,
+        "2027": 4.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.3,
+        "2026": 0.3,
+        "2027": 0.3,
+        "2028": 0.3,
+        "2029": 0.3,
+        "2030": 0.3,
+        "2031": 0.3,
+        "2032": 0.3,
+        "2033": 0.3,
+        "2034": 0.3
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.8,
+        "2028": 1.6,
+        "2029": 2.0,
+        "2030": 2.0,
+        "2031": 2.0,
+        "2032": 2.0,
+        "2033": 2.0,
+        "2034": 2.0
+      },
+      "headcount_by_year": {
+        "2025": 1.0,
+        "2026": 1.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "high",
+    "evidence_snippets": [
+      "Onsite potential is constrained by land/roof and local grid conditions; treat as site-specific."
+    ]
+  },
+  {
+    "lever_id": "L05_LowCarbon_BackupPower",
+    "title": "Low-carbon backup power (battery + renewable diesel/HVO as interim)",
+    "description": "Reduce generator emissions via battery backup for short events and lower-carbon fuels for longer runtime.",
+    "lever_type": "transfer",
+    "scope_targets": [
+      "S1"
+    ],
+    "category_targets": [
+      "S1C1_GeneratorsFuel"
+    ],
+    "prerequisites": [
+      "Reliability requirements review",
+      "Fuel availability assessment"
+    ],
+    "potential": {
+      "min_pct": 0.2,
+      "central_pct": 0.45,
+      "max_pct": 0.6
+    },
+    "transfer_params": {
+      "low_carbon_intensity_ratio": 0.2,
+      "max_share_shift": 0.7
+    },
+    "ramp": {
+      "default_start_year": 2026,
+      "default_duration_years": 4,
+      "curve": "linear"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.0,
+        "2026": 2.0,
+        "2027": 1.5,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.2,
+        "2026": 0.2,
+        "2027": 0.2,
+        "2028": 0.2,
+        "2029": 0.2,
+        "2030": 0.2,
+        "2031": 0.2,
+        "2032": 0.2,
+        "2033": 0.2,
+        "2034": 0.2
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "headcount_by_year": {
+        "2025": 0.0,
+        "2026": 1.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "medium",
+    "evidence_snippets": [
+      "Prototype assumes reduced intensity for shifted share; real-world depends on runtime profiles and fuel pathways."
+    ]
+  },
+  {
+    "lever_id": "L06_Logistics_Optimization",
+    "title": "Inbound logistics optimization (mode shift, consolidation, route planning)",
+    "description": "Reduce upstream transport emissions through smarter routing and consolidation with suppliers.",
+    "lever_type": "specification",
+    "scope_targets": [
+      "S3"
+    ],
+    "category_targets": [
+      "S3C4_UpstreamTransport"
+    ],
+    "prerequisites": [
+      "Carrier data",
+      "Supplier coordination"
+    ],
+    "potential": {
+      "min_pct": 0.05,
+      "central_pct": 0.1,
+      "max_pct": 0.15
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 2,
+      "curve": "linear"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.5,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.1,
+        "2026": 0.1,
+        "2027": 0.1,
+        "2028": 0.1,
+        "2029": 0.1,
+        "2030": 0.1,
+        "2031": 0.1,
+        "2032": 0.1,
+        "2033": 0.1,
+        "2034": 0.1
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.4,
+        "2027": 0.6,
+        "2028": 0.8,
+        "2029": 0.8,
+        "2030": 0.8,
+        "2031": 0.8,
+        "2032": 0.8,
+        "2033": 0.8,
+        "2034": 0.8
+      },
+      "headcount_by_year": {
+        "2025": 1.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "low",
+    "evidence_snippets": [
+      "Logistics initiatives often have measurable fuel and cost savings; uncertainty lower than tech levers."
+    ]
+  },
+  {
+    "lever_id": "L07_Sustainable_Procurement",
+    "title": "Sustainable procurement (supplier standards + lower-carbon materials)",
+    "description": "Reduce purchased goods emissions via supplier engagement and product specifications.",
+    "lever_type": "specification",
+    "scope_targets": [
+      "S3"
+    ],
+    "category_targets": [
+      "S3C1_PurchasedGoods"
+    ],
+    "prerequisites": [
+      "Supplier carbon data",
+      "Contractual levers",
+      "Category strategies"
+    ],
+    "potential": {
+      "min_pct": 0.05,
+      "central_pct": 0.12,
+      "max_pct": 0.18
+    },
+    "ramp": {
+      "default_start_year": 2026,
+      "default_duration_years": 5,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.0,
+        "2026": 0.5,
+        "2027": 0.7,
+        "2028": 0.9,
+        "2029": 1.0,
+        "2030": 1.0,
+        "2031": 1.0,
+        "2032": 1.0,
+        "2033": 1.0,
+        "2034": 1.0
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "headcount_by_year": {
+        "2025": 0.0,
+        "2026": 1.0,
+        "2027": 1.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "high",
+    "evidence_snippets": [
+      "Prototype treats procurement as modest Opex premium; real economics vary widely by category and leverage."
+    ]
+  },
+  {
+    "lever_id": "L08_Travel_Demand_Reduction",
+    "title": "Business travel reduction (virtual-first policy + trip bundling)",
+    "description": "Cut flight and hotel activity via virtual meetings and travel policy changes.",
+    "lever_type": "quantity",
+    "scope_targets": [
+      "S3"
+    ],
+    "category_targets": [
+      "S3C6_BusinessTravel"
+    ],
+    "prerequisites": [
+      "Policy update",
+      "Executive sponsorship"
+    ],
+    "potential": {
+      "min_pct": 0.15,
+      "central_pct": 0.3,
+      "max_pct": 0.4
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 1,
+      "curve": "linear"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.1,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "savings_by_year": {
+        "2025": 0.8,
+        "2026": 1.2,
+        "2027": 1.5,
+        "2028": 1.5,
+        "2029": 1.5,
+        "2030": 1.5,
+        "2031": 1.5,
+        "2032": 1.5,
+        "2033": 1.5,
+        "2034": 1.5
+      },
+      "headcount_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "low",
+    "evidence_snippets": [
+      "Travel cuts can be implemented quickly; savings are usually immediate."
+    ]
+  },
+  {
+    "lever_id": "L09_Commuting_Shift",
+    "title": "Employee commuting shift (hybrid work + EV incentives + public transit)",
+    "description": "Reduce commuting emissions via fewer trips and cleaner commute modes.",
+    "lever_type": "transfer",
+    "scope_targets": [
+      "S3"
+    ],
+    "category_targets": [
+      "S3C7_Commuting"
+    ],
+    "prerequisites": [
+      "HR policy alignment",
+      "Incentive budget"
+    ],
+    "potential": {
+      "min_pct": 0.1,
+      "central_pct": 0.2,
+      "max_pct": 0.3
+    },
+    "transfer_params": {
+      "low_carbon_intensity_ratio": 0.6,
+      "max_share_shift": 0.6
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 2,
+      "curve": "linear"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.3,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.2,
+        "2026": 0.2,
+        "2027": 0.2,
+        "2028": 0.2,
+        "2029": 0.2,
+        "2030": 0.2,
+        "2031": 0.2,
+        "2032": 0.2,
+        "2033": 0.2,
+        "2034": 0.2
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.2,
+        "2027": 0.3,
+        "2028": 0.3,
+        "2029": 0.3,
+        "2030": 0.3,
+        "2031": 0.3,
+        "2032": 0.3,
+        "2033": 0.3,
+        "2034": 0.3
+      },
+      "headcount_by_year": {
+        "2025": 1.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "medium",
+    "evidence_snippets": [
+      "Prototype uses a blended intensity ratio for shifted commute modes; actual impact varies by location."
+    ]
+  },
+  {
+    "lever_id": "L10_Waste_Circularity",
+    "title": "Waste reduction & circularity (recycling, reuse, vendor take-back)",
+    "description": "Reduce waste emissions through diversion, recycling and vendor take-back programs.",
+    "lever_type": "specification",
+    "scope_targets": [
+      "S3"
+    ],
+    "category_targets": [
+      "S3C5_Waste"
+    ],
+    "prerequisites": [
+      "Waste audit",
+      "Vendor partnerships"
+    ],
+    "potential": {
+      "min_pct": 0.2,
+      "central_pct": 0.4,
+      "max_pct": 0.6
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 2,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.2,
+        "2026": 0.1,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.05,
+        "2026": 0.05,
+        "2027": 0.05,
+        "2028": 0.05,
+        "2029": 0.05,
+        "2030": 0.05,
+        "2031": 0.05,
+        "2032": 0.05,
+        "2033": 0.05,
+        "2034": 0.05
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.05,
+        "2027": 0.1,
+        "2028": 0.1,
+        "2029": 0.1,
+        "2030": 0.1,
+        "2031": 0.1,
+        "2032": 0.1,
+        "2033": 0.1,
+        "2034": 0.1
+      },
+      "headcount_by_year": {
+        "2025": 1.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "medium",
+    "evidence_snippets": [
+      "Diversion rates depend on infrastructure and vendor contracts; treat central estimate as achievable with effort."
+    ]
+  },
+  {
+    "lever_id": "L11_Heat_Recovery",
+    "title": "Heat recovery (waste heat reuse/export)",
+    "description": "Capture and reuse/export waste heat, reducing net energy demand and/or providing low-carbon heat to third parties.",
+    "lever_type": "specification",
+    "scope_targets": [
+      "S2"
+    ],
+    "category_targets": [
+      "S2C1_Electricity"
+    ],
+    "prerequisites": [
+      "Local heat offtake",
+      "Engineering design",
+      "Permitting"
+    ],
+    "potential": {
+      "min_pct": 0.02,
+      "central_pct": 0.05,
+      "max_pct": 0.08
+    },
+    "ramp": {
+      "default_start_year": 2026,
+      "default_duration_years": 4,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 0.0,
+        "2026": 3.0,
+        "2027": 3.0,
+        "2028": 4.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.2,
+        "2026": 0.2,
+        "2027": 0.2,
+        "2028": 0.2,
+        "2029": 0.2,
+        "2030": 0.2,
+        "2031": 0.2,
+        "2032": 0.2,
+        "2033": 0.2,
+        "2034": 0.2
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.3,
+        "2029": 0.6,
+        "2030": 1.0,
+        "2031": 1.2,
+        "2032": 1.2,
+        "2033": 1.2,
+        "2034": 1.2
+      },
+      "headcount_by_year": {
+        "2025": 0.0,
+        "2026": 1.0,
+        "2027": 1.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "high",
+    "evidence_snippets": [
+      "Heat recovery is highly site-dependent and needs local offtake; included as a stretch lever."
+    ]
+  },
+  {
+    "lever_id": "L12_CarbonAware_Workload_Shifting",
+    "title": "Carbon-aware workload shifting (time/region shifting + grid-aware scheduling)",
+    "description": "Shift a share of compute to lower-carbon regions/times, reducing electricity emission intensity.",
+    "lever_type": "transfer",
+    "scope_targets": [
+      "S2"
+    ],
+    "category_targets": [
+      "S2C1_Electricity"
+    ],
+    "prerequisites": [
+      "Workload orchestration layer",
+      "Real-time grid intensity data"
+    ],
+    "potential": {
+      "min_pct": 0.05,
+      "central_pct": 0.1,
+      "max_pct": 0.18
+    },
+    "transfer_params": {
+      "low_carbon_intensity_ratio": 0.5,
+      "max_share_shift": 0.35
+    },
+    "ramp": {
+      "default_start_year": 2025,
+      "default_duration_years": 3,
+      "curve": "s_curve"
+    },
+    "cost_model": {
+      "capex_by_year": {
+        "2025": 1.0,
+        "2026": 0.5,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      },
+      "opex_by_year": {
+        "2025": 0.2,
+        "2026": 0.2,
+        "2027": 0.2,
+        "2028": 0.2,
+        "2029": 0.2,
+        "2030": 0.2,
+        "2031": 0.2,
+        "2032": 0.2,
+        "2033": 0.2,
+        "2034": 0.2
+      },
+      "savings_by_year": {
+        "2025": 0.0,
+        "2026": 0.2,
+        "2027": 0.4,
+        "2028": 0.5,
+        "2029": 0.5,
+        "2030": 0.5,
+        "2031": 0.5,
+        "2032": 0.5,
+        "2033": 0.5,
+        "2034": 0.5
+      },
+      "headcount_by_year": {
+        "2025": 1.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0
+      }
+    },
+    "uncertainty": "high",
+    "evidence_snippets": [
+      "Impact depends on flexibility of workloads and grid intensity spreads; prototype uses conservative central estimate."
+    ]
+  }
+]
