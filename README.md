@@ -1,4 +1,4 @@
-# KPMG DeCar Demo Prototype
+# KPMG DeCar Demo
 
 This project implements an end-to-end decarbonization demo:
 baseline footprint → SBTi targets → lever discovery → pathway simulation → MACC + finance.
